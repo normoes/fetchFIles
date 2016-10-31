@@ -48,9 +48,9 @@ def emptyCreateTarget(path):
 
 if __name__ == '__main__':
     #root_dirs = (r'path1', r'path2', r'pathn')
-    root_dirs = (r'/home/norman/Dropbox_decrypted/git_sources/poller', r'/home/norman/Dropbox_decrypted/git_sources/fetchFiles')
+    root_dirs = (r'path1', r'path2', r'pathN')
 
-    target_dir = r'/home/norman/Dropbox_decrypted/git_sources/TESTTESTTEST'
+    target_dir = r'OutputPath'
 
     if emptyCreateTarget(target_dir):
         file_extensions = ('.md', '.py')
