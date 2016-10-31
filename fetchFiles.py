@@ -1,8 +1,21 @@
 import os
 import shutil
 
+"""
+TODO:
+	make it possible to keep order structure
+	--> like done in FileOperations.backup_file
+		source/
+			utils/
+				main.py
+		target/
+			utils/
+				main.py
+		(not:
+		target/
+			main.py)
+"""
 
-#temp_dir = r'C:\Temp\Python_Backup'
 
 def fetchFilesFrom(root_dirs, file_extensions):
     print 'Start:'
@@ -34,15 +47,13 @@ def emptyCreateTarget(path):
     return False
 
 if __name__ == '__main__':
-    #root_dirs = (r'C:\Users\nom\Documents\SVN\old\src', )
-    #target_dir = r'C:\Users\nom\Documents\SVN\modelmakerOLDsources'
-    root_dirs = (r'C:\Users\nom\Documents\SVN\CodeBeamer\src', r'C:\Users\nom\Documents\SVN\CodeBeamer_Components\trunk')
+    #root_dirs = (r'path1', r'path2', r'pathn')
+    root_dirs = (r'/home/norman/Dropbox_decrypted/git_sources/poller', r'/home/norman/Dropbox_decrypted/git_sources/fetchFiles')
 
-    target_dir = r'C:\Users\nom\Documents\SVN\modelmakerNEWsources'
+    target_dir = r'/home/norman/Dropbox_decrypted/git_sources/TESTTESTTEST'
 
     if emptyCreateTarget(target_dir):
-        file_extensions = ('.dfm', '.pas')
-        #files = list()
+        file_extensions = ('.md', '.py')
         dry_run = True
         files = fetchFilesFrom(root_dirs=root_dirs, file_extensions=file_extensions)
         for name in files:
