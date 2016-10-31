@@ -5,4 +5,5 @@ Gets all the files (depending on given file extension) from given directories an
 copies them into the given folder.
 
 next steps:
+
 	- passing arguments
